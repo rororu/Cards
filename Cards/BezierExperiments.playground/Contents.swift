@@ -14,11 +14,13 @@ class MyViewController : UIViewController {
     
     private func createBezier(on view: UIView) {
         let shapeLayer = CAShapeLayer()
-        
         view.layer.addSublayer(shapeLayer)
         
         shapeLayer.strokeColor = UIColor.gray.cgColor
         shapeLayer.lineWidth = 5
+        shapeLayer.fillColor = UIColor.green.cgColor
+        shapeLayer.lineDashPattern = [5]
+        shapeLayer.lineDashPhase = 2
         
         shapeLayer.path = getPath().cgPath
     }
@@ -27,6 +29,8 @@ class MyViewController : UIViewController {
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 50, y: 50))
         path.addLine(to: CGPoint(x: 150, y: 50))
+        
+        path.addLine(to: CGPoint(x: 150, y: 150))
         
         return path
     }
