@@ -75,6 +75,15 @@ class MyViewController : UIViewController {
         
         return path
     }
+    
+    private func getComboPath() -> UIBezierPath {
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 100, y: 100))
+        path.addArc(withCenter: CGPoint(x: 150, y: 100), radius: 50, startAngle: .pi, endAngle: 0, clockwise: true)
+        path.addLine(to: CGPoint(x: 150, y: 100))
+        
+        return path
+    }
 }
 // Present the view controller in the Live View window
 PlaygroundPage.current.liveView = MyViewController()
