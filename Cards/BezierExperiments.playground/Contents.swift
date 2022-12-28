@@ -15,44 +15,50 @@ class MyViewController : UIViewController {
     private func createBezier(on view: UIView) {
         
         //MARK: - Two treangle
-        /*let shapeLayer = CAShapeLayer()
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.backgroundColor = UIColor.white.cgColor
+        
         view.layer.addSublayer(shapeLayer)
         
-        shapeLayer.strokeColor = UIColor.gray.cgColor
-        shapeLayer.lineWidth = 5
-        shapeLayer.fillColor = UIColor.green.cgColor
-        
-        shapeLayer.path = getPath().cgPath*/
-        
-        //MARK: - Rectangle
-        /*let rectangle = CAShapeLayer()
-        shapeLayer.addSublayer(rectangle)
-        
-        rectangle.fillColor = UIColor.yellow.cgColor
-        rectangle.lineWidth = 5
-        rectangle.strokeColor = UIColor.gray.cgColor
-        
-        rectangle.path = getRect().cgPath*/
-        
-        //MARK: - Arc
-        /*let arc = CAShapeLayer()
-        shapeLayer.addSublayer(arc)
-        
-        arc.fillColor = UIColor.blue.cgColor
-        arc.strokeColor = UIColor.gray.cgColor
-        arc.lineWidth = 5
-        
-        arc.path = getArc().cgPath*/
-        
-        //MARK: - ComboPath
         let comboPath = CAShapeLayer()
-        view.layer.addSublayer(comboPath)
+        shapeLayer.addSublayer(comboPath)
         
         comboPath.lineWidth = 5
         comboPath.fillColor = UIColor.magenta.cgColor
         comboPath.strokeColor = UIColor.darkGray.cgColor
         
         comboPath.path = getComboPath().cgPath
+        
+        let twoTreangle = CAShapeLayer()
+        shapeLayer.addSublayer(twoTreangle)
+         
+        twoTreangle.strokeColor = UIColor.gray.cgColor
+        twoTreangle.lineWidth = 5
+        twoTreangle.fillColor = UIColor.green.cgColor
+        
+        twoTreangle.path = getPath().cgPath
+        
+        //MARK: - Rectangle
+        let rectangle = CAShapeLayer()
+        shapeLayer.addSublayer(rectangle)
+        
+        rectangle.fillColor = UIColor.yellow.cgColor
+        rectangle.lineWidth = 5
+        rectangle.strokeColor = UIColor.gray.cgColor
+        
+        rectangle.path = getRect().cgPath
+        
+        //MARK: - Arc
+        let arc = CAShapeLayer()
+        shapeLayer.addSublayer(arc)
+        
+        arc.fillColor = UIColor.blue.cgColor
+        arc.strokeColor = UIColor.gray.cgColor
+        arc.lineWidth = 5
+        
+        arc.path = getArc().cgPath
+        
+        //MARK: - ComboPath
     }
     
     private func getPath() -> UIBezierPath {

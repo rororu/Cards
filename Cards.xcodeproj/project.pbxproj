@@ -25,6 +25,7 @@
 		F064C768294A1CCD0060790C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F064C76A294A1CCD0060790C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F064C770294A1D090060790C /* ViewExperiments.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ViewExperiments.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F084F24E295B028000BC8C4D /* ShapeLayer.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ShapeLayer.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F0869D4529520522008FAD70 /* BezierExperiments.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BezierExperiments.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -67,6 +68,7 @@
 				F064C76A294A1CCD0060790C /* Info.plist */,
 				F064C770294A1D090060790C /* ViewExperiments.playground */,
 				F0869D4529520522008FAD70 /* BezierExperiments.playground */,
+				F084F24E295B028000BC8C4D /* ShapeLayer.playground */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
