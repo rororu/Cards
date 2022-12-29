@@ -14,6 +14,8 @@ class MyViewController: UIViewController {
         
         let secondCardView = CardView<CircleShape>(frame: CGRect(x: 200, y: 0, width: 120, height: 150), color: .red)
         self.view.addSubview(secondCardView)
+        
+        secondCardView.isFlipped = true
     }
 }
 
