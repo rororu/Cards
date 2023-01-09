@@ -3,11 +3,60 @@
 import UIKit
 import PlaygroundSupport
 
+class Heart: UIView {
+    private var coordinte: CGPoint = CGPoint(x: 0, y: 0)
+    var path: CAShapeLayer?
+    
+    
+    init(frame: CGRect, color: UIColor) {
+        super.init(frame: frame)
+        let viewww = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        
+        
+        let layerHeart = CAShapeLayer()
+        layerHeart.path = getHeart().cgPath
+        layerHeart.fillColor = color.cgColor
+        self.backgroundColor = UIColor.blue
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("")
+    }
+    
+    private func getHeart() -> UIBezierPath {
+        let path = UIBezierPath()
+        
+        path.move(to: CGPoint(x: 5, y: 30))
+        path.addArc(withCenter: CGPoint(x: 30, y: 30), radius: 25, startAngle: .pi, endAngle: .pi * 2, clockwise: true)
+        path.addArc(withCenter: CGPoint(x: 80, y: 30), radius: 25, startAngle: .pi, endAngle: .pi * 2, clockwise: true)
+        path.addLine(to: CGPoint(x: 55, y: 80))
+        path.close()
+        
+        return path
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        coordinte.x = touches.first!.location(in: window).x - frame.minX
+        coordinte.y = touches.first!.location(in: window).y - frame.minY
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.frame.origin.x = touches.first!.location(in: window).x - coordinte.x
+        self.frame.origin.y = touches.first!.location(in: window).y - coordinte.y
+    }
+}
+
 class MyViewController : UIViewController {
     override func loadView() {
         let view = UIView()
         view.backgroundColor = .white
         self.view = view
+        
+        let heart = Heart(frame: CGRect(x: 0, y: 0, width: 110, height: 100), color: .black)
+        view.addSubview(heart)
+        view.superview?.bringSubviewToFront(heart)
+        
         
         createBezier(on: view)
     }
@@ -31,7 +80,7 @@ class MyViewController : UIViewController {
         
         let twoTreangle = CAShapeLayer()
         shapeLayer.addSublayer(twoTreangle)
-         
+        
         twoTreangle.strokeColor = UIColor.gray.cgColor
         twoTreangle.lineWidth = 5
         twoTreangle.fillColor = UIColor.green.cgColor
@@ -59,6 +108,7 @@ class MyViewController : UIViewController {
         arc.path = getArc().cgPath
         
         //MARK: - ComboPath
+        
     }
     
     private func getPath() -> UIBezierPath {
@@ -80,6 +130,8 @@ class MyViewController : UIViewController {
     private func getRect() -> UIBezierPath {
         let rect = CGRect(x: 165, y: 50, width: 200, height: 100)
         let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.bottomLeft, .topRight], cornerRadii: CGSize(width: 30, height: 0))
+        path.move(to: CGPoint(x: 165, y: 50))
+        path.addLine(to: CGPoint(x: 365, y: 150))
         
         return path
     }
