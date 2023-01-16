@@ -17,6 +17,7 @@
 		F0ACC438296CCE21000D7D74 /* BoardGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACC437296CCE21000D7D74 /* BoardGameController.swift */; };
 		F0ACC43B296CD10F000D7D74 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACC43A296CD10F000D7D74 /* Card.swift */; };
 		F0ACC43D296CD2C7000D7D74 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACC43C296CD2C7000D7D74 /* Game.swift */; };
+		F0ACC44029746F1F000D7D74 /* CardViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACC43F29746F1F000D7D74 /* CardViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F0ACC437296CCE21000D7D74 /* BoardGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameController.swift; sourceTree = "<group>"; };
 		F0ACC43A296CD10F000D7D74 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F0ACC43C296CD2C7000D7D74 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F0ACC43F29746F1F000D7D74 /* CardViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		F064C75B294A1CCC0060790C /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				F0ACC43E29746EEB000D7D74 /* Helpers */,
 				F0ACC439296CCF1C000D7D74 /* Model */,
 				F0ACC436296CCDCC000D7D74 /* Controller */,
 				F0ACC435296CCD22000D7D74 /* Storyboards */,
@@ -109,6 +112,14 @@
 				F0ACC43C296CD2C7000D7D74 /* Game.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F0ACC43E29746EEB000D7D74 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACC43F29746F1F000D7D74 /* CardViewFactory.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 				F0ACC43D296CD2C7000D7D74 /* Game.swift in Sources */,
 				F0ACC438296CCE21000D7D74 /* BoardGameController.swift in Sources */,
 				F064C75D294A1CCC0060790C /* AppDelegate.swift in Sources */,
+				F0ACC44029746F1F000D7D74 /* CardViewFactory.swift in Sources */,
 				F064C75F294A1CCC0060790C /* SceneDelegate.swift in Sources */,
 				F0ACC432296CC161000D7D74 /* Shapes.swift in Sources */,
 			);

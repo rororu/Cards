@@ -142,3 +142,23 @@ class SquareShape: CAShapeLayer, ShapeLayerProtocol {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+class TriangleShape: CAShapeLayer, ShapeLayerProtocol {
+    required init(size: CGSize, fillColor: CGColor) {
+        super.init()
+        
+        let path = UIBezierPath()
+        
+        path.move(to: CGPoint(x: size.width / 2, y: 0))
+        path.addLine(to: CGPoint(x: size.width, y: size.height / 2))
+        path.addLine(to: CGPoint(x: 0, y: size.height / 2))
+        path.close()
+        
+        self.path = path.cgPath
+        self.fillColor = fillColor
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
